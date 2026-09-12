@@ -1,0 +1,47 @@
+{
+  "name": "genpark-structured-extract-schema-validator-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Deterministic JSON schema extraction and coercing engine transforming messy unstructured scraping texts into strictly-typed hardware/service records.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "data-extraction",
+  "tags": [
+    "structured-extraction",
+    "schema-validator",
+    "instructor",
+    "pydantic-validation",
+    "json-schema"
+  ],
+  "inputs": {
+    "raw_unstructured_text": {
+      "type": "string",
+      "default": "EcoFlow Delta Pro 3 is an ultra-fast home backup power station priced at $3199"
+    },
+    "expected_schema_type": {
+      "type": "string",
+      "default": "ProductHardwareSpec"
+    }
+  },
+  "outputs": {
+    "extraction_id": {
+      "type": "string"
+    },
+    "schema_type": {
+      "type": "string"
+    },
+    "validated_attributes": {
+      "type": "object"
+    },
+    "schema_conformity_score": {
+      "type": "number"
+    },
+    "validation_status": {
+      "type": "string"
+    },
+    "schema_audit_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
